@@ -72,6 +72,19 @@ input, select, textarea {
 	appearance: none;
 }
 
+.work-item-content {
+	display: flex;
+	align-items: flex-start; /* Align items to the top by default */
+  
+	/* Apply media query for small screens (adjust the breakpoint as needed) */
+	@media (max-width: 768px) {
+	  flex-direction: column; /* Stack items vertically on small screens */
+	  align-items: flex-start; /* Align items to the top on small screens */
+	}
+  }
+  
+  
+
 /* Basic */
 
 	html {
@@ -133,8 +146,8 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
-		margin-bottom: 20px; 
-		padding-bottom: 40px; 
+		margin-bottom: 5px; 
+		padding-bottom: 20px; 
 	}
 
 	h3 {
@@ -172,6 +185,11 @@ input, select, textarea {
 			line-height: 1em;
 		}
 
+		p {
+			font-size: 1em;
+			line-height: 1.5em;
+		}
+
 		h2 strong {
 			display: inline-block; /* Maintain inline layout */
 			font-size: inherit; /* Inherit font size from parent h2 element */
@@ -180,7 +198,7 @@ input, select, textarea {
 		}
 	
 		h3 {
-			font-size: 1.25em;
+			font-size: 1em;
 			line-height: 1.5em;
 		}
 	
@@ -264,11 +282,6 @@ input, select, textarea {
 			text-align: right;
 		}
 	
-	/* Style for the content container */
-.content {
-    flex: 2; /* Allow the content container to grow and take available space */
-	text-align: justify; 
-}
 
 /* Style for the title */
 .content h3 {
@@ -1865,13 +1878,13 @@ input, select, textarea {
 	}
 
 	header h2 + p {
-		font-size: 1.25em;
+		font-size: 1em;
 		margin-top: -0.5em;
 		line-height: 1.5em;
 	}
 
 	header h3 + p {
-		font-size: 1.1em;
+		font-size: 1em;
 		margin-top: -0.35em;
 		line-height: 1.5em;
 	}
@@ -1879,7 +1892,7 @@ input, select, textarea {
 	header h4 + p,
 	header h5 + p,
 	header h6 + p {
-		font-size: 0.9em;
+		font-size: 1em;
 		margin-top: -0.25em;
 		line-height: 1.5em;
 	}
@@ -1891,7 +1904,7 @@ input, select, textarea {
 
 		header.major h2 + p {
 			color: #777;
-			font-size: 1.75em;
+			font-size: 1em;
 			font-weight: 700;
 			margin-top: -0.75em;
 		}
@@ -2095,23 +2108,19 @@ input, select, textarea {
     margin-bottom: 20px; /* Add margin for spacing between items */
 }
 
-/* Style for the image container */
 .image-container {
-    flex: 1; /* Allow the image container to grow and take available space */
-    margin-right: 20px; /* Add margin for spacing between image and content */
-    max-width: 200px; /* Set the maximum width for the image container */
-}
+	flex: 0 0 auto; /* Let the image container grow and shrink as needed */
+	margin-right: 20px; /* Add some spacing between image and content */
+  }
+  
+  .content {
+	flex: 1; /* Allow content to take remaining space */
+  }
 
 /* Style for the image */
 .image-container img {
     max-width: 100%; /* Ensure the image doesn't exceed its container */
     max-height: 200px; /* Set the maximum height for the image */
-}
-
-/* Style for the content container */
-.content {
-    flex: 2; /* Allow the content container to grow and take available space */
-	text-align: justify; 
 }
 
 /* Style for the title */
@@ -3303,7 +3312,7 @@ input, select, textarea {
 			}
 
 				header.major h2 + p {
-					font-size: 1.5em;
+					font-size: 1em;
 				}
 
 		/* Features */
