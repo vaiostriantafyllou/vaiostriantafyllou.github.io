@@ -154,14 +154,14 @@ input, select, textarea {
 		color: #black;
 		font-weight: 400;
 		line-height: 1em;
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 	}
 
 	h1, h2, h4, h5, h6 {
 		color: #black;
 		font-weight: 400;
 		line-height: 1em;
-		margin: 0 0 0.9em 0;
+		margin: 0 0 2em 0;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -286,7 +286,7 @@ input, select, textarea {
 /* Style for the title */
 .content h3 {
     margin: 0; /* Reset the default margin */
-	color: blue !important;
+	color: rgb(32, 34, 110) !important;
 }
 
 .content h3 strong {
@@ -1898,12 +1898,12 @@ input, select, textarea {
 	}
 
 	header.major h2 {
-		color: #64a2d0;
+		color: #000000;
 		font-size: 3.5em;
 	}
 
 		header.major h2 + p {
-			color: #777;
+			color: black;
 			font-size: 1em;
 			font-weight: 700;
 			margin-top: -0.75em;
@@ -2848,8 +2848,8 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #4e9ffd;
-		color: #d2f2e9;
+		background: #ffffff;
+		color: #0e100f;
 		height: 100%;
 		overflow-y: auto;
 		position: fixed;
@@ -2857,10 +2857,11 @@ input, select, textarea {
 		top: 0;
 		width: 23em;
 		right: 0;
+		margin-top: 15em;
 	}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-			color: #ffffff;
+			color: #black;
 		}
 
 			#header h1 a, #header h2 a, #header h3 a, #header h4 a, #header h5 a, #header h6 a {
@@ -2872,7 +2873,7 @@ input, select, textarea {
 		}
 
 		#header a {
-			color: #d2f2e9;
+			color: #black;
 		}
 
 			#header a:hover {
@@ -2987,7 +2988,7 @@ input, select, textarea {
 
 #main > section:first-child {
     border-top: 0;
-    margin-top: 0;
+    margin-top: -4em; 
     padding-top: 0;
 }
 
