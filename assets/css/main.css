@@ -2976,13 +2976,13 @@ input, select, textarea {
 #main {
     margin-left: 5%; /* Adjust margin to extend more towards the left */
     max-width: 54em;
-    padding: 8em 1em 4em 1em; /* Adjust padding as needed */
+    padding: 8em 1em 1.5em 1em; /* Adjust padding as needed */
     width: calc(100% - 10%); /* Adjust the width calculation to match the margin-left */
 }
 
 #main > section {
     border-top: solid 2px #efefef;
-    margin: 4em 0 0 0;
+    margin: 2em 0 0 0;
     padding: 4em 0 0 0;
 }
 
