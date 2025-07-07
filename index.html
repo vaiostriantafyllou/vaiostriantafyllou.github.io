@@ -18,6 +18,16 @@
 
 		gtag('config', 'G-VD57MQQBRS');
 	</script>
+
+	<script>
+  function toggleAbstract(link) {
+    const abstractDiv = link.parentElement.nextElementSibling;
+    const isVisible = abstractDiv.style.display === "block";
+    abstractDiv.style.display = isVisible ? "none" : "block";
+    link.textContent = isVisible ? "Abstract" : "Abstract";
+  }
+</script>
+
 	<body class="is-preload">
 
 		<!-- Header -->
@@ -44,9 +54,7 @@
 						<!-- One -->
 							<section id="one">
 								<div class="content">
-									<p  style="text-align: justify;">Hello! My name is Vaios and I am a fourth-year Ph.D. candidate in Economics at Cornell University.</p>
-
-									<p>My research interests are broadly in the fields of environmental economics, labor economics, and political economy.</p>
+									<p  style="text-align: justify;">Hello! My name is Vaios and I am a fourth-year Ph.D. candidate in Economics at Cornell University. My research interests are broadly in the fields of environmental economics, labor economics, and political economy.</p>
 										
 									<p style="text-align: justify;">I am an engineer by training; I hold a Bachelor’s in Mechanical Engineering and Applied Mechanics from Harvard University and a Master’s in Mechanical Engineering from the University of Pennsylvania.</p>
 										
@@ -55,19 +63,15 @@
 							</section>
 
 						<!-- Two -->
-						<section id="two">
+						<section id="two" style="padding-top: 2em; margin-top: 2em;">
 							<h2>Publications</h2>
 								<article class="col-6 col-12-xsmall work-item">
 									<div class="work-item-content">
 									<div class="content">
-										<h3 style="text-align: justify; font-weight: bold;">
-											<a href="https://www.sciencedirect.com/science/article/abs/pii/S0927537124000630">Measuring the quality of a match</a>
-										</h3>
-										<h3>Labour Economics, Volume 215, 104753</h3>
-										<h3>May 2024</h3>
-										<h6><em>(with Michèle Belot and Xiaoying Liu)</em></h6>
-										
-
+										<h3 style="text-align: justify; font-weight: bold;"> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0927537124000630">Measuring the quality of a match</a>  
+											
+										<span style="font-style: italic; font-size: smaller; font-weight: normal;"> <em>Labour Economics, Volume 215, 104753 (2024)</em></span></h3>
+									<h6><em>(with <a href="https://sites.google.com/site/mvkbelot/home" target="_blank" style="color: inherit; text-decoration: underline;">Michèle Belot </a> and Xiaoying Liu)</em></h6>
 										<!--<p style="text-align: justify;">In this paper, we review the advantages and drawbacks of various measures of match quality. We find that wages, performance evaluations, and measures of skill fit correlate well with each other, but not with tenure length and job satisfaction. We raise a word of caution in using a subset of measures to assess the quality of a match.</p>-->
 									</div>
 									</div>
@@ -75,29 +79,54 @@
 						</section>
 
 						<!-- Three -->
-					<section id="two">
+					<section id="three" style="padding-top: 2em; margin-top: 2em;">
 						<h2>Working papers</h2>
 							<article class="col-6 col-12-xsmall work-item">
 								<div class="work-item-content">
 								<div class="content">
-									<h3 style="text-align: justify; font-weight: bold;"> The non-green effects of going green: Local environmental and economic consequences of lithium extraction in Chile  <span style="font-style: italic; font-size: smaller; font-weight: normal;"> (Revise and Resubmit, <em>Journal of Environmental Economics and Management</em>)</span></h3>
+									<h3 style="text-align: justify; font-weight: bold;"> The non-green effects of going <em>green</em>: Local environmental and economic consequences of lithium extraction in Chile  <span style="font-style: italic; font-size: smaller; font-weight: normal;"> Revise and Resubmit, <em>Journal of Environmental Economics and Management</em></span></h3>
 									<h6><em>(with <a href="https://www.leonardopenalozapacheco.com/" target="_blank" style="color: inherit; text-decoration: underline;">Leonardo Peñaloza-Pacheco</a> and Gonzalo Martínez)</em></h6>
-
-									<!--<p style="text-align: justify;">In this paper, we analyze the local environmental and economic impacts of lithium extraction in the Atacama Salt Flat (ASF) in Chile. We use groundwater well levels to estimate the impact of the exposure to lithium extraction on water availability. Consequently, we use satellite data to estimate the effects  of this exposure on vegetation, nighttime light radiance, and local human settlements near the ASF.</p>-->
-									<p> [<a href="docs/chile_lithium.pdf" >Latest version</a>] [<a href="https://scioteca.caf.com/handle/123456789/2173" >CAF Working paper</a>] </p>
+									<p style="font-size: 0.85em;">
+									<a href="docs/chile_lithium.pdf">Latest version</a>
+									<a href="https://scioteca.caf.com/handle/123456789/2173" style="margin-left: 1em;">CAF Working paper</a>
+									</p>
 								</div>
 								</div>
 							</article>
 					</section>
 
 						<!-- Four -->
-					<section id="two">
-						<h2>Works in progress</h2>
-							<article class="col-6 col-12-xsmall work-item">
-								<div class="content">
-									<h3 style="text-align: justify; font-weight: bold;">Earnings lost in the green transition: The costs of phasing out coal-fired power generation</h3>
-								</div>
-							</article>			
+					<section id="four"  style="padding-top: 2em; margin-top: 2em;">
+					<h2>Works in progress</h2>
+					<article class="col-6 col-12-xsmall work-item" style="margin-bottom: 0.2em;">
+						<div class="content">
+						<h3 style="text-align: justify; font-weight: bold;">
+							Earnings lost in the <em>green</em> transition: The costs of phasing out coal-fired power generation
+						</h3>
+
+						<!-- Toggle link -->
+						<p>
+							<a href="#" onclick="toggleAbstract(this); return false;" style="font-size: 0.9em;">Abstract</a>
+						</p>
+
+						<!-- Hidden abstract -->
+							<div class="abstract-text" style="display: none; text-align: justify; font-size: 0.8em;">
+							<p>
+								In this paper I study the impact of the German policy to phase out coal-fired power generation on local labor markets.
+								Comparing workers in the supply chain of coal to ones in other industries, I find a 4.2% decline in average daily wages,
+								mainly affecting those in upstream economic activities. Workers separating from their firms experienced a 5% reduction,
+								while ones staying saw a decline of 1.1%, recovering within four years. <em>Leavers</em> remained in the same industries,
+								while <em>stayers</em> downgraded and switched occupations. I provide evidence that the pickup in <em>green</em> installations partially mitigated the potential employment effects.
+							</p>
+							</div>
+						</div>
+					</article>
+					<article class="col-6 col-12-xsmall work-item" style="margin-top: 0.5em;">
+						<div class="content">
+						<h3 style="text-align: justify; font-weight: bold;"> Demand for and effects of Islamic law on European Muslims: Evidence from Northern Greece </h3>
+									<h6><em>(with <a href="https://sites.google.com/stanford.edu/fouka/home" target="_blank" style="color: inherit; text-decoration: underline;">Vicky Fouka</a>)</h6>
+						</div>
+					</article>
 					</section>
 			</div>
 

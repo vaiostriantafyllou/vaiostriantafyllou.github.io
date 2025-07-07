@@ -113,7 +113,7 @@ input, select, textarea {
 	body, input, select, textarea {
 		color: #black;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 16pt;
+		font-size: 12pt;
 		font-weight: 400;
 		line-height: 1.75em;
 	}
@@ -124,13 +124,13 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #49bf9d;
+		color: #87cefa;
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #49bf9d !important;
+			color: #5dade2 !important;
 			text-decoration: none;
 		}
 
@@ -161,7 +161,9 @@ input, select, textarea {
 		color: #black;
 		font-weight: 400;
 		line-height: 1em;
-		margin: 0 0 2em 0;
+		margin: 0 0 0.5em 0;
+		margin-top: 0.1em;
+		margin-bottom: 1em;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1900,6 +1902,7 @@ input, select, textarea {
 	header.major h2 {
 		color: #000000;
 		font-size: 3.5em;
+		margin-bottom: 1em;
 	}
 
 		header.major h2 + p {
@@ -2592,65 +2595,66 @@ input, select, textarea {
 	}
 
 	table {
-		margin: 0 0 2.25em 0;
-		width: 100%;
+		margin: 0 auto 2.25em auto;     /* Center the table horizontally */
+		width: auto;                    /* Shrink to fit content */
+		max-width: 100%;                /* Prevent overflow */
 	}
 
-		table tbody tr {
-			border: solid 2px #f4f4f4;
-			border-left: 0;
-			border-right: 0;
-		}
+	table tbody tr {
+		border: solid 2px #f4f4f4;
+		border-left: 0;
+		border-right: 0;
+	}
 
-			table tbody tr:nth-child(2n + 1) {
-				background-color: #fafafa;
-			}
+	table tbody tr:nth-child(2n + 1) {
+		background-color: #fafafa;
+	}
 
-		table td {
-			padding: 0.75em 0.75em;
-		}
+	table td {
+		padding: 0.75em 0.75em;
+	}
 
-		table th {
-			color: #777;
-			font-size: 0.9em;
-			font-weight: 700;
-			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
-		}
+	table th {
+		color: #777;
+		font-size: 0.9em;
+		font-weight: 700;
+		padding: 0 0.75em 0.75em 0.75em;
+		text-align: left;
+	}
 
-		table thead {
-			border-bottom: solid 1px #ccc:;
-		}
+	table thead {
+		border-bottom: solid 1px #ccc;  /* fixed typo: removed extra colon */
+	}
 
-		table tfoot {
-			border-top: solid 4px #e4e4e4;
-		}
+	table tfoot {
+		border-top: solid 4px #e4e4e4;
+	}
 
-		table.alt {
-			border-collapse: separate;
-		}
+	table.alt {
+		border-collapse: separate;
+	}
 
-			table.alt tbody tr td {
-				border: solid 2px #e4e4e4;
-				border-left-width: 0;
-				border-top-width: 0;
-			}
+	table.alt tbody tr td {
+		border: solid 2px #e4e4e4;
+		border-left-width: 0;
+		border-top-width: 0;
+	}
 
-				table.alt tbody tr td:first-child {
-					border-left-width: 2px;
-				}
+	table.alt tbody tr td:first-child {
+		border-left-width: 2px;
+	}
 
-			table.alt tbody tr:first-child td {
-				border-top-width: 2px;
-			}
+	table.alt tbody tr:first-child td {
+		border-top-width: 2px;
+	}
 
-			table.alt thead {
-				border-bottom: 0;
-			}
+	table.alt thead {
+		border-bottom: 0;
+	}
 
-			table.alt tfoot {
-				border-top: 0;
-			}
+	table.alt tfoot {
+		border-top: 0;
+	}
 
 /* Button */
 
@@ -2855,9 +2859,9 @@ input, select, textarea {
 		position: fixed;
 		text-align: center;
 		top: 0;
-		width: 23em;
+		width: 40em;
 		right: 0;
-		margin-top: 5em;
+		margin-top: 10em;
 	}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
@@ -2964,18 +2968,17 @@ input, select, textarea {
 						border-top: 0;
 					}
 
-/* Wrapper */
-
-	#wrapper {
-		background: #fff;
-		padding-right: 23em;
-	}
+#wrapper {
+	background: #fff;
+	max-width: 3000px;     /* Set a maximum width */
+	padding: 1em;           /* Adjust padding around content */
+}
 
 /* Main */
 
 #main {
     margin-left: 5%; /* Adjust margin to extend more towards the left */
-    max-width: 54em;
+    max-width: 60em;
     padding: 8em 1em 0.5em 1em; /* Adjust padding as needed */
     width: calc(100% - 10%); /* Adjust the width calculation to match the margin-left */
 }
