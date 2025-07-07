@@ -3474,3 +3474,12 @@ input, select, textarea {
 			}
 
 	}
+
+	@media screen and (max-width: 736px) {
+  .content p,
+  .content h3,
+  .abstract-text,
+  section#main p {
+    text-align: left !important;
+  }
+}
