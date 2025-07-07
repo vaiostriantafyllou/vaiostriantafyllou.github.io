@@ -189,7 +189,7 @@ input, select, textarea {
 		}
 
 		p {
-			font-size: 1em;
+			font-size: 100%;
 			line-height: 1.5em;
 		}
 
@@ -1881,13 +1881,13 @@ input, select, textarea {
 	}
 
 	header h2 + p {
-		font-size: 1em;
+		font-size: 100%;
 		margin-top: -0.5em;
 		line-height: 1.5em;
 	}
 
 	header h3 + p {
-		font-size: 1em;
+		font-size: 100%;
 		margin-top: -0.35em;
 		line-height: 1.5em;
 	}
@@ -1895,7 +1895,7 @@ input, select, textarea {
 	header h4 + p,
 	header h5 + p,
 	header h6 + p {
-		font-size: 1em;
+		font-size: 100%;
 		margin-top: -0.25em;
 		line-height: 1.5em;
 	}
@@ -1908,7 +1908,7 @@ input, select, textarea {
 
 		header.major h2 + p {
 			color: black;
-			font-size: 1em;
+			font-size: 100%;
 			font-weight: 700;
 			margin-top: -0.75em;
 		}
@@ -3317,7 +3317,7 @@ input, select, textarea {
 			}
 
 				header.major h2 + p {
-					font-size: 1em;
+					font-size: 100%;
 				}
 
 		/* Features */
