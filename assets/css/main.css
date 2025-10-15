@@ -2349,7 +2349,7 @@ input, select, textarea {
 				margin: 0 auto;       /* centers the image horizontally */
 				width: 200px;         /* set desired size */
 				height: 200px;        /* optional, to make it square */
-				border-radius: 50%;   /* keeps it circular if it's an avatar */
+				border-radius: 30%;   /* keeps it circular if it's an avatar */
 				object-fit: cover;    /* ensures the image fills nicely */
 			}
 			
