@@ -2347,9 +2347,9 @@ input, select, textarea {
 			.image.avatar img {
 				display: block;
 				margin: 0 auto;       /* centers the image horizontally */
-				width: 180px;         /* set desired size */
-				height: 180px;        /* optional, to make it square */
-				border-radius: 100%;   /* keeps it circular if it's an avatar */
+				width: 200px;         /* set desired size */
+				height: 200px;        /* optional, to make it square */
+				border-radius: 50%;   /* keeps it circular if it's an avatar */
 				object-fit: cover;    /* ensures the image fills nicely */
 			}
 			
