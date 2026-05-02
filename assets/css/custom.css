@@ -1,0 +1,204 @@
+/* =========================================================
+   Custom site styles. Loaded after main.css so it overrides.
+   Edit this file to change the look — avoid inline styles.
+
+   ----- Theme tokens -----
+   To recolor the site, change --accent.
+   To change the font, change --font-serif.
+   ========================================================= */
+
+:root {
+	/* Accent color used ONLY for section headings (Publications, etc.)
+	   and small hover touches. Try alternatives:
+	     #8b1a1a  muted Cornell red (current)
+	     #1f3a5f  deep slate blue
+	     #2d5547  dark forest green
+	     #4a3b2a  warm bistre brown
+	*/
+	--accent: #3d2f1f;
+
+	--font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+
+	--ink:        #1a1a1a;
+	--ink-muted:  #555;
+	--rule:       rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- Base typography (one font, everywhere) ---------- */
+
+body,
+input, select, textarea,
+h1, h2, h3, h4, h5, h6,
+p, li, a, span, em, strong {
+	font-family: var(--font-serif);
+}
+
+body {
+	color: var(--ink);
+}
+
+/* Base link styling — dark text with a quiet underline that
+   lights up on hover. No color change ever (override the
+   template's !important blue hover). */
+a,
+a:hover,
+a:visited {
+	color: inherit !important;
+	text-decoration: none;
+	border-bottom: 1px solid var(--rule);
+	transition: border-color 0.15s ease;
+}
+
+a:hover {
+	border-bottom-color: var(--accent) !important;
+}
+
+/* ---------- Sidebar header ---------- */
+#header > header .avatar {
+	width: 15em;
+}
+
+#header h1 {
+	font-weight: 600;
+	letter-spacing: 0.01em;
+}
+
+#header h3 {
+	font-weight: 400;
+	font-style: italic;
+	color: var(--ink-muted);
+	letter-spacing: 0.01em;
+	margin: 0;
+	padding: 0;
+	line-height: 1.3;
+}
+
+/* Breathing room between "Cornell University" h3 and the icons row. */
+#header .icons {
+	margin-top: 1.5em;
+}
+
+/* Sidebar social icons — dark by default, accent on hover.
+   The template sets these to light blue via an invalid #black
+   declaration that falls back to the global a { color: #87cefa }.
+   These overrides need !important to win. */
+#header .icons a,
+#header .icons a:visited {
+	color: var(--ink) !important;
+	border-bottom: none;
+}
+
+#header .icons a:hover {
+	color: var(--accent) !important;
+	border-bottom: none;
+}
+
+/* ---------- Section headings (the only place accent is used) ---------- */
+section > h2 {
+	font-weight: 500;
+	color: var(--accent);
+	border-bottom: 1px solid var(--rule);
+	padding-bottom: 0.3em;
+	margin-bottom: 0.8em;
+}
+
+/* ---------- Layout ----------
+   Reduce the template's huge 8em top padding on #main (main.css:2980)
+   so "Hello!" sits closer to the top of the page. */
+#main {
+	padding-top: 2em;
+}
+
+/* ---------- Section spacing ----------
+   Override the template's #main > section rule (main.css:2987),
+   which adds a 2px gray border-top and a wide 4em gap between
+   sections. Same specificity as template, loaded after, so wins. */
+#main > section {
+	border-top: 0;
+	padding-top: 1.5em;
+	margin-top: 1em;
+}
+
+#main > section:first-child {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+.section {
+	padding-top: 1.5em;
+	margin-top: 1em;
+}
+
+/* ---------- Publications / papers / WIP ---------- */
+.pub {
+	margin-bottom: 1.25em;
+}
+
+.pub-title {
+	font-weight: 500;
+	font-size: 1.1em;
+	margin: 0 0 0.25em 0;
+	line-height: 1.4;
+	color: var(--ink);
+}
+
+.pub-venue {
+	font-style: italic;
+	font-weight: 700;
+}
+
+.pub-meta {
+	font-style: italic;
+	font-weight: normal;
+	color: var(--ink-muted);
+}
+
+/* Co-author line — small, italic, muted.
+   Zero out the template's p padding-bottom (main.css:151). */
+.coauthors {
+	font-size: 0.95em;
+	font-style: italic;
+	color: var(--ink-muted);
+	margin: 0.15em 0 0 0;
+	padding: 0;
+	line-height: 1.4;
+}
+
+/* Small download / pre-registration links beneath an entry.
+   Zero out the template's p padding-bottom (main.css:151). */
+.paper-links {
+	font-size: 0.95em;
+	margin: 0.4em 0 0 0;
+	padding: 0;
+	line-height: 1.4;
+}
+
+	.paper-links a + a {
+		margin-left: 1em;
+	}
+
+/* Grant / award tag beneath a working paper title.
+   Zero out the template's p padding-bottom (main.css:151) so
+   consecutive grants stack tightly. */
+.grant {
+	font-size: 0.95em;
+	font-style: italic;
+	color: var(--ink-muted);
+	margin: 0.1em 0 0 0;
+	padding: 0;
+	line-height: 1.3;
+}
+
+/* ---------- Bio paragraphs ---------- */
+#one .content p {
+	text-align: left;
+	font-size: 1.05em;
+	line-height: 1.6;
+}
+
+	/* CV "here" link — turn blue on hover (overrides the global a:hover
+	   border-bottom-color rule, which uses the bistre accent). */
+	#one .content p a:hover {
+		color: #1f3a5f !important;
+		border-bottom-color: #1f3a5f !important;
+	}
