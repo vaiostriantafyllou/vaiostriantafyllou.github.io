@@ -17,7 +17,7 @@
 	*/
 	--accent: #3d2f1f;
 
-	--font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+	--font-serif: 'Crimson Pro', Georgia, 'Times New Roman', serif;
 
 	--ink:        #1a1a1a;
 	--ink-muted:  #555;
@@ -54,8 +54,75 @@ a:hover {
 }
 
 /* ---------- Sidebar header ---------- */
+
+/* Move sidebar from right to left (overrides main.css positioning).
+   Also widen the column from the template's 21em default. */
+#header {
+	right: auto;
+	left: 5em;
+	width: 25em;
+}
+
+#wrapper {
+	padding-right: 0;
+	padding-left: 30em;
+}
+
 #header > header .avatar {
 	width: 15em;
+	margin-right: 0;
+	margin-left: auto;
+}
+
+/* Right-align the entire sidebar header so the avatar, title, subtitle,
+   and icons all hug the right edge (closer to the main text column).
+   Reduce the template's 3em right padding so they sit even closer. */
+#header > header {
+	padding-right: 0.5em;
+	text-align: right;
+}
+
+#header .icons {
+	text-align: right;
+}
+
+@media screen and (max-width: 1280px) {
+	#header {
+		left: 5em;
+		width: 16em;
+	}
+	#wrapper {
+		padding-left: 21em;
+	}
+	/* The 15em avatar overflows the 16em sidebar (after padding only 12.5em
+	   of content area is left), and #header's overflow:auto clips the right
+	   edge with a sharp corner. Shrink the avatar so it fits. */
+	#header > header .avatar {
+		width: 11em;
+	}
+}
+
+/* On medium/small screens the sidebar is an off-canvas panel that slides
+   in from the side. Flip the slide direction so it comes from the left. */
+@media screen and (max-width: 1024px) {
+	#wrapper {
+		padding-left: 0;
+	}
+
+	#header {
+		-moz-transform: translateX(-23em);
+		-webkit-transform: translateX(-23em);
+		-ms-transform: translateX(-23em);
+		transform: translateX(-23em);
+	}
+
+	body.header-visible #wrapper,
+	body.header-visible #titleBar {
+		-moz-transform: translateX(23em);
+		-webkit-transform: translateX(23em);
+		-ms-transform: translateX(23em);
+		transform: translateX(23em);
+	}
 }
 
 #header h1 {
@@ -96,6 +163,7 @@ a:hover {
 /* ---------- Section headings (the only place accent is used) ---------- */
 section > h2 {
 	font-weight: 500;
+	font-size: 1.8em;
 	color: var(--accent);
 	border-bottom: 1px solid var(--rule);
 	padding-bottom: 0.3em;
@@ -106,7 +174,8 @@ section > h2 {
    Reduce the template's huge 8em top padding on #main (main.css:2980)
    so "Hello!" sits closer to the top of the page. */
 #main {
-	padding-top: 2em;
+	padding-top: 5em;
+	max-width: 70em;
 }
 
 /* ---------- Section spacing ----------
