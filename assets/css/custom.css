@@ -123,6 +123,54 @@ a:hover {
 		-ms-transform: translateX(23em);
 		transform: translateX(23em);
 	}
+
+	/* Toggle button lives on the LEFT edge of the title bar so it stays
+	   reachable when the panel slides in from the left. The template
+	   originally pins it to the right (main.css:3214-3251). */
+	#titleBar .toggle {
+		left: 0;
+		right: auto;
+	}
+
+	#titleBar .toggle:before {
+		left: 0;
+		right: auto;
+	}
+
+	/* The toggle now occupies the left ~64px of the bar, so push the
+	   title text past it instead of letting "Vaios" sit underneath. */
+	#titleBar .title {
+		padding-left: 5em;
+	}
+}
+
+/* Phone breakpoint: the template defines a separate, narrower panel at
+   ≤736px (main.css:3337+). Mirror the left-slide flip with phone-sized
+   numbers so the wrapper push matches the panel width and the toggle
+   remains on screen when the panel is open. */
+@media screen and (max-width: 736px) {
+	#header {
+		right: auto;
+		left: 0;
+		width: 17em;
+		-moz-transform: translateX(-17em);
+		-webkit-transform: translateX(-17em);
+		-ms-transform: translateX(-17em);
+		transform: translateX(-17em);
+	}
+
+	#header > header .avatar {
+		width: 6em;
+		margin: 0 auto 1.6875em auto;
+	}
+
+	body.header-visible #wrapper,
+	body.header-visible #titleBar {
+		-moz-transform: translateX(17em);
+		-webkit-transform: translateX(17em);
+		-ms-transform: translateX(17em);
+		transform: translateX(17em);
+	}
 }
 
 #header h1 {
