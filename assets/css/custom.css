@@ -124,23 +124,46 @@ a:hover {
 		transform: translateX(23em);
 	}
 
-	/* Toggle button lives on the LEFT edge of the title bar so it stays
-	   reachable when the panel slides in from the left. The template
-	   originally pins it to the right (main.css:3214-3251). */
+
 	#titleBar .toggle {
-		left: 0;
+		left: 6px;
 		right: auto;
+		top: 0;
+		width: 44px;
+		height: 44px;
 	}
 
 	#titleBar .toggle:before {
-		left: 0;
+		content: '';
+		position: absolute;
+		display: block;
+		top: 15px;
+		left: 12px;
 		right: auto;
+		width: 20px;
+		height: 2px;
+		border-radius: 2px;
+		background: var(--accent);
+		box-shadow: 0 6px 0 var(--accent), 0 12px 0 var(--accent);
+		font-size: 0;
 	}
 
-	/* The toggle now occupies the left ~64px of the bar, so push the
-	   title text past it instead of letting "Vaios" sit underneath. */
 	#titleBar .title {
-		padding-left: 5em;
+		padding-left: 62px;
+	}
+	#header > header {
+		padding: 2em;
+		text-align: center;
+	}
+
+	#header > header .avatar {
+		width: 60%;
+		max-width: 13em;
+		margin: 0 auto 1.6875em auto;
+	}
+
+	#header .icons {
+		text-align: center;
 	}
 }
 
@@ -222,7 +245,7 @@ section > h2 {
    Reduce the template's huge 8em top padding on #main (main.css:2980)
    so "Hello!" sits closer to the top of the page. */
 #main {
-	padding-top: 5em;
+	padding-top: 2em;
 	max-width: 70em;
 }
 

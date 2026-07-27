@@ -3190,13 +3190,13 @@ input, select, textarea {
 				top: 0;
 				width: 100%;
 				z-index: 10001;
-				background: #222;
-				color: #fff;
+				background: #eceef6;
+				color: #1f2328;
 				min-width: 320px;
 			}
 
 				#titleBar .title {
-					color: #fff;
+					color: #1f2328;
 					display: block;
 					font-weight: 700;
 					height: 44px;
@@ -3233,21 +3233,6 @@ input, select, textarea {
 						text-transform: none !important;
 						font-family: "Source Sans Pro", Helvetica, sans-serif;
 						font-weight: 900;
-					}
-
-					#titleBar .toggle:before {
-						background: #64a2d0;
-						color: #ffffff;
-						content: '\f0c9';
-						display: block;
-						font-size: 18px;
-						height: 44px;
-						line-height: 44px;
-						position: absolute;
-						text-align: center;
-						top: 0;
-						width: 64px;
-						right: 0;
 					}
 
 			body.header-visible #wrapper, body.header-visible #titleBar {
@@ -3392,15 +3377,6 @@ input, select, textarea {
 
 		/* Header Panel */
 
-			#titleBar .toggle {
-				height: 4em;
-				width: 6em;
-			}
-
-				#titleBar .toggle:before {
-					font-size: 14px;
-					width: 44px;
-				}
 
 			body.header-visible #wrapper, body.header-visible #titleBar {
 				-moz-transform: translateX(-17em);
