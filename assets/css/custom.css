@@ -342,3 +342,7 @@ section > h2 {
 		color: #1f3a5f !important;
 		border-bottom-color: #1f3a5f !important;
 	}
+
+#header header h1 {
+    font-size: 1.7em;
+}
